@@ -6,16 +6,6 @@
 	<title><?php bloginfo('name')?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="" />
-	<!-- css -->
-	<link href="<?php echo get_template_directory_uri();?>/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="<?php echo get_template_directory_uri();?>/css/fancybox/jquery.fancybox.css" rel="stylesheet">
-	<link href="<?php echo get_template_directory_uri();?>/css/jcarousel.css" rel="stylesheet" />
-	<link href="<?php echo get_template_directory_uri();?>/css/flexslider.css" rel="stylesheet" />
-	
-	<link href="<?php echo get_template_directory_uri();?>/css/style.css" rel="stylesheet" />
-
-	<!-- Theme skin -->
-	<link href="<?php echo get_template_directory_uri();?>/skins/default.css" rel="stylesheet" />
 
 	<!-- =======================================================
     Theme Name: Moderna
@@ -25,7 +15,6 @@
 	======================================================= -->
 
 <?php wp_head(); ?>
-
 
 </head>
 
@@ -44,20 +33,15 @@
 						<a class="navbar-brand" href="index.html"><span>M</span>oderna</a>
 					</div>
 					<div class="navbar-collapse collapse ">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Features <b class=" icon-angle-down"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="typography.html">Typography</a></li>
-									<li><a href="components.html">Components</a></li>
-									<li><a href="pricingbox.html">Pricing box</a></li>
-								</ul>
-							</li>
-							<li><a href="portfolio.html">Portfolio</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
+
+						<?php 
+							wp_nav_menu( array(
+								'theme_location'=>'main_menu',
+								'menu_class'=>'nav navbar-nav',
+								'fallback_cb' =>'moderna_fallback_page'
+							));
+						?>
+					
 					</div>
 				</div>
 			</div>
@@ -348,18 +332,9 @@
 	<!-- javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="<?php echo get_template_directory_uri();?>/js/jquery.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/jquery.easing.1.3.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/bootstrap.min.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.pack.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox-media.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/google-code-prettify/prettify.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/portfolio/jquery.quicksand.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/portfolio/setting.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/jquery.flexslider.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/animate.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/custom.js"></script>
+	
 
+ <?php wp_footer();?>
 </body>
 
 </html>
