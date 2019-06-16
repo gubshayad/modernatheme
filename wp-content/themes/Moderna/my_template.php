@@ -1,5 +1,5 @@
+<?php /* Template Name: My template */ ?>
 <?php get_header(); ?>
-
 		<!-- end header -->
 		<section id="featured">
 			<!-- start slider -->
@@ -38,8 +38,7 @@
 						<!-- end slider -->
 					</div>
 				</div>
-			</div>
-			
+			</div>	
 		</section>
 		<section class="callaction">
 			<div class="container">
