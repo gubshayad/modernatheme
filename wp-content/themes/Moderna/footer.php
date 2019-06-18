@@ -1,8 +1,11 @@
 <footer>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3">
-						<div class="widget">
+
+				<?php if( ! dynamic_sidebar( 'widgets-footer' )) :?>
+
+
+					<div class="col-lg-3"><div class="widget">
 							<h5 class="widgetheading">Get in touch with us</h5>
 							<address>
 					<strong>Moderna company Inc</strong><br>
@@ -46,6 +49,7 @@
 							</div>
 						</div>
 					</div>
+				<?php endif ; ?>
 				</div>
 			</div>
 			<div id="sub-footer">

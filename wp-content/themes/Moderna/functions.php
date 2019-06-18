@@ -17,5 +17,7 @@
 
     include_once('inc/coustom-post.php');
 
+    include_once('inc/theme-widgets.php');
+
     
 ?>
