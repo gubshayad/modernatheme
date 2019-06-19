@@ -18,6 +18,13 @@
     include_once('inc/coustom-post.php');
 
     include_once('inc/theme-widgets.php');
+    
+    //About the read more 
 
+    include_once('inc/moderna-readmore.php');
+    
+    //About the shortcode
+    
+    include_once('inc/shortcode.php');
     
 ?>

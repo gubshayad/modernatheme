@@ -21,7 +21,7 @@
 							<?php the_post_thumbnail('slide-img') ?>
 							<div class="flex-caption">
 								<h3><?php the_title()?></h3>
-								<?php the_excerpt() ?>
+								<?php read_more(10);?>...
 								<a href="#" class="btn btn-theme">Learn More</a>
 							</div>
 						</li>
