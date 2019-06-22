@@ -26,5 +26,9 @@
     //About the shortcode
     
     include_once('inc/shortcode.php');
+
+    //About the mce button
+
+    include_once('inc/wp_mce_button.php');
     
 ?>
