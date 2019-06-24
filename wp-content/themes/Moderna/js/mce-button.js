@@ -2,7 +2,7 @@
     tinymce.PluginManager.add('my_mce_button', function(editor, url) {
         editor.addButton('my_mce_button', {
             text: 'New Button',
-            icon: false,
+            icon: true,
             onclick: function() {
                 editor.windowManager.open({
                     title: 'Insert Random Shortcode',
@@ -25,14 +25,22 @@
                             type: 'listbox',
                             name: 'listboxName',
                             label: 'List Box',
-                            'values': [
-                                { text: 'Option 1', value: '1' },
-                                { text: 'Option 2', value: '2' },
-                                { text: 'Option 3', value: '3' }
+                            'values': [{
+                                    text: 'Option 1',
+                                    value: '1'
+                                },
+                                {
+                                    text: 'Option 2',
+                                    value: '2'
+                                },
+                                {
+                                    text: 'Option 3',
+                                    value: '3'
+                                }
                             ]
                         }
                     ],
-                    onsubmit: function(e) {
+                    onsubmit: function() {
                         editor.insertContent('[random_shortcode textbox="' + e.data.textboxName + '" multiline="' + e.data.multilineName + '" listbox="' + e.data.listboxName + '"]');
                     }
                 });

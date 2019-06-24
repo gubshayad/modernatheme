@@ -21,7 +21,7 @@
     
     //About the read more 
 
-    include_once('inc/moderna-readmore.php');
+    include_once('inc/moderna-readmore.php'); 
     
     //About the shortcode
     

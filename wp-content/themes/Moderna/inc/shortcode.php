@@ -25,7 +25,7 @@
             'text'=>'',
             'active' =>'',
             'type'=>''
-        ), $atts ));
+        ), $atts )); 
 
         return '<div class="progress progress-striped '.$active.'">
                 <div class="progress-bar progress-bar-'.$type.'" role="progressbar" aria-valuenow="'.$value.'" aria-valuemin="0" aria-valuemax="100" style="width: '.$value.'%">
@@ -35,7 +35,7 @@
     }
     add_shortcode( 'bar', 'progress_bar_shortcode');
 
-    function priceing_table($atts, $content = null){
+    function priceing_table($atts, $content = null){  
             extract(shortcode_atts( array(
                 'heading_1' => 'Very',
                 'heading_2' => 'Basic',

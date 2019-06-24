@@ -55,7 +55,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<div class="row">
+				<div class="row"> 
 
 					<?php query_posts(array(
 									'post_type'=>'service',
