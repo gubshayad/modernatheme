@@ -7,7 +7,7 @@
             'icon'=>'',
             'text' => ''
         ), $atts ) );
-
+ 
         if($icon):
             return '<a href="'.$link.'" class="btn btn-'.$type.'"><i class="fa fa-'.$icon.'"></i> '.$text.'</a>';
         else :
@@ -67,5 +67,31 @@
     }
 
     add_shortcode( 'priceing', 'priceing_table' );
+
+
+    function post_list_shortcode($atts, $content = null){
+        extract(shortcode_atts( array(
+    
+        ), $atts )); 
+
+        $q= new Wp_Query(
+            array(
+                'post_per_page'=>'5',
+                'post_type'=>$type,
+            ));
+
+         $list="<ul>";
+            while($q->have_posts()): $q->the_post();
+                $list.='
+                    <li><a href="'.get_the_permalink().'">'.get_the_title().'</a></li>
+                ';
+        endwhile;
+         $list.="</ul>";   
+         wp_reset_query();
+         return $list;
+       
+    }
+
+    add_shortcode( 'post', 'post_list_shortcode');
     
 ?>

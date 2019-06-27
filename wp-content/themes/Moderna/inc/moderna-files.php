@@ -31,12 +31,12 @@
    
 
     function moderna_admin_files(){
-        wp_register_style( 'mce-icons', get_template_directory_uri() . '/css/mce-icons', array(), '1.0', 'all' );
+        wp_register_style( 'mce-icons', get_template_directory_uri() . '/css/mce-icons.css', array(), '1.0', 'all' );
     
         wp_enqueue_style( 'mce-icons' );
     }
 
-    add_action('','');
+    add_action('admin_enqueue_scripts', 'moderna_admin_files');
 
 
 ?>
