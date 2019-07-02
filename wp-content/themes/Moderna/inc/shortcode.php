@@ -144,4 +144,35 @@
     }
 
     add_shortcode('portfolio_list', 'test_portfolio_shortcode');
+
+    
+    function jobs_list_shortcode($atts, $content = null){
+        extract(shortcode_atts( array(
+                'count'=>'5',
+        ), $atts )); 
+
+        $q= new Wp_Query(
+            array(
+                'posts_per_page'=>$count,
+                'post_type'=>'jobs',
+            ));
+
+         $list="<div class='all-job-list'>";
+            while($q->have_posts()): $q->the_post();
+                $jobs_link = get_post_meta( get_the_ID(), 'jobs_link', true );
+                $list.='
+                    <div class="single-jobs">
+                        <h2>'.get_the_title().'</h2>
+                        '.get_the_excerpt().'
+                         <a href="">Apply the online</a>
+                    </div>
+                ';
+        endwhile;
+         $list.="</div>";   
+         wp_reset_query();
+         return $list;
+       
+    }
+
+    add_shortcode( 'jobs', 'jobs_list_shortcode' );
 ?>

@@ -32,6 +32,17 @@
         ),
         'supports' => array ('title', 'editor', 'excerpt', 'custom-fields','thumbnail')
     ));
+
+    register_post_type('jobs', array(
+        'public' => true ,
+        'label'  => 'Job',
+        'labels' => array(
+            'name'=>'jobs',
+            'singular_name'=>'job',
+            'add_new'=>'Add new job',
+        ),
+        'supports' => array ('title', 'editor', 'excerpt', 'custom-fields','thumbnail')
+    ));
 }
 
     add_action('init', 'moderna_custom_post');
