@@ -39,90 +39,20 @@ function custom_theme_options() {
 			),
 			'sidebar' => '<p>' . __( 'Sidebar content goes here!', 'theme-text-domain' ) . '</p>',
 		),
-		'sections'      => array(
+		'sections'        => array(
 			array(
 				'id'    => 'option_types',
 				'title' => __( 'Option Types', 'theme-text-domain' ),
 			),
-			array(
-				'id'    => 'header_settings',
-				'title' => __( 'Header Types', 'theme-text-domain' ),
-			),
-			array(
-				'id'    => 'footer_settings',
-				'title' => __( 'Footer settings', 'theme-text-domain' ),
-			),
-			array(
-				'id'    => 'color_settings',
-				'title' => __( 'Colors settings', 'theme-text-domain' ),
-			),
-			array(
-				'id'    => 'custom_settings',
-				'title' => __( 'Custom Codes', 'theme-text-domain' ),
-			),
-			
 		),
-		'settings' => array(
-			array(
-				'id'=>'phone_no',
-				'label'=>__( 'phone number set', 'theme-text-domain' ),
-				'desc'=>'Set your phone number on header',
-				'std'=>'+88 01798487684',
-				'type'=>'text',
-				'section'=>'header_settings',
-			),
-			array(
-				'id'=>'social_link',
-				'label'=>__( 'Social buttons setting', 'theme-text-domain' ),
-				'desc'=>'Click add new and Set your social button on header',
-				'type'=>'social-links',
-				'section'=>'header_settings',
-				
-			),
-			array(
-				'id'=>'header_logo',
-				'label'=>__( 'Change your logo', 'theme-text-domain' ),
-				'type'=>'upload',
-				'section'=>'header_settings',
-			),
-			array(
-				'id'=>'copyright_text',
-				'label'=>__( 'Copyright Text', 'theme-text-domain' ),
-				'type'=>'textarea',
-				'desc'=>'change your copyright text and link',
-				'section'=>'footer_settings',
-				'std'=>'&copyright Datatrixsoft',
-			),
-			array(
-				'id'=>'theme_color',
-				'label'=>__( 'Change the color', 'theme-text-domain' ),
-				'type'=>'colorpicker',
-				'desc'=>'change your color as you like',
-				'section'=>'color_settings',
-				'std'=>'#126b4a',
-			),
-			array(
-				'id'=>'custom_code',
-				'label'=>__( 'Custom-js-code', 'theme-text-domain' ),
-				'type'=>'textarea-simple',
-				'desc'=>'customize the site as you like',
-				'section'=>'custom_settings',
-			),
-			array(
-				'id'=>'custom_css',
-				'label'=>__( 'Custom-CSS-Code', 'theme-text-domain' ),
-				'type'=>'css',
-				'desc'=>'customize the site as you like',
-				'section'=>'custom_settings',
-			),
-
+		'settings'        => array(
 			array(
 				'id'           => 'demo_background',
 				'label'        => __( 'Background', 'theme-text-domain' ),
 				'desc'         => sprintf( __( 'The Background option type is for adding background styles to your theme either dynamically via the CSS option type below or manually with %1$s. The Background option type has filters that allow you to remove fields or change the defaults. For example, you can filter %2$s to remove unwanted fields from all Background options or an individual one. You can also filter %3$s. These filters allow you to fine tune the select lists for your specific needs.', 'theme-text-domain' ), '<code>ot_get_option()</code>', '<code>ot_recognized_background_fields</code>', '<code>ot_recognized_background_repeat</code>, <code>ot_recognized_background_attachment</code>, <code>ot_recognized_background_position</code>, ' . __( 'and', 'theme-text-domain' ) . ' <code>ot_type_background_size_choices</code>' ),
 				'std'          => '',
 				'type'         => 'background',
-				'section'      => 'footer_settings',
+				'section'      => 'option_types',
 				'rows'         => '',
 				'post_type'    => '',
 				'taxonomy'     => '',
