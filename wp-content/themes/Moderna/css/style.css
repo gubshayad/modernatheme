@@ -78,7 +78,7 @@ h6 {
 
 .row,
 .row-fluid {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .row .row,
@@ -141,6 +141,96 @@ img.img-polaroid {
 4. Header
 ==================================== */
 
+/* ----Top header---- */
+
+#header .search{
+    display: inline-block;
+  }
+  
+  .navbar>.container .navbar-brand{
+    margin-left: 0;
+  }
+  
+  .top-bar {
+    padding: 10px 0;
+    background: #191919;
+    border-bottom: 1px solid #222;
+    line-height: 28px;
+    padding-bottom: 0px;
+  }
+  
+  .top-number{
+    color: #fff;
+  }
+  
+  .top-number p{
+    margin: 0
+  }
+  
+  .social{
+    text-align: right;
+  }
+  
+  .social-share{
+   display: inline-block;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+  }
+  
+  ul.social-share li {
+    display: inline-block;
+  }
+  
+  ul.social-share li a {
+    display: inline-block;
+    color: #fff;
+    background: #404040;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 2px;
+  }
+  
+  ul.social-share li a:hover {
+    background: #c52d2f;
+    color: #fff;
+  }
+  
+  .search i {
+    color: #fff;
+  }
+  
+  input.search-form{
+    background: transparent;
+    border: 0 none;
+    width: 60px;
+    padding: 0 10px;
+    color: #FFF;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+  }
+
+  input.search-form::-webkit-input-placeholder{
+    color: transparent;
+  }
+  
+  input.search-form:hover::-webkit-input-placeholder {
+    color: #fff;
+  }
+  
+  input.search-form:hover {
+    width: 180px;
+  }
+  .search {
+    float: right;
+    margin: 0px;
+    padding-bottom: 0;
+}
 
 /* --- header -- */
 
@@ -669,7 +759,7 @@ form#commentform textarea {
 
 .search {
     float: right;
-    margin: 35px 0 0;
+    margin: 0px 0 0;
     padding-bottom: 0;
 }
 
