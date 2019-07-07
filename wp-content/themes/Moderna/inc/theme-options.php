@@ -67,7 +67,6 @@ function custom_theme_options() {
 				'id'=>'phone_no',
 				'label'=>__( 'phone number set', 'theme-text-domain' ),
 				'desc'=>'Set your phone number on header',
-				'std'=>'+88 01798487684',
 				'type'=>'text',
 				'section'=>'header_settings',
 			),

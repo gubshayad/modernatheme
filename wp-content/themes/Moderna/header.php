@@ -26,16 +26,28 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6 col-xs-4">
-							<div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
-						</div>
+
+						<?php $phone_no = ot_get_option( 'phone_no'); ?>
+
+							<?php if($phone_no) : ?>
+
+							<div class="top-number"><p><i class="fa fa-phone-square"> <?php echo $phone_no; ?></i></p></div>
+								<?php endif ;?>
+							</div>
 						<div class="col-sm-6 col-xs-8">
 						<div class="social">
 								<ul class="social-share">
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								<?php 
+								/* get the slider array */
+										$socialicons = ot_get_option( 'social_link', array() );
+										
+										if ( ! empty( $socialicons ) ) {
+											foreach( $socialicons as $socialicon ) {
+											echo '
+											<li><a href="'.$socialicon['href'].'" alt="'.$socialicon['title'].'" target="_blank"><i class="fa fa-'.$socialicon['name'].'"></i></a></li>';
+											}
+										}
+								?>
 								</ul>
 								<div class="search">
 									<form role="form">
