@@ -1,4 +1,5 @@
 <?php /* Template Name: My template */ ?>
+
 <?php get_header(); ?>
 <!-- end header -->
 <section id="featured">
