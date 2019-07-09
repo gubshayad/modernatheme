@@ -23,7 +23,7 @@
 							<div class="flex-caption">
 								<h3><?php the_title()?></h3>
 								<?php read_more(10);?>...
-								<a href="#" class="btn btn-theme">Learn More</a>
+								<a href="<?php the_permalink(); ?>" class="btn btn-theme">Learn More</a>
 							</div>
 						</li>
 						<?php endwhile; 
@@ -78,7 +78,7 @@
 
 							</div>
 							<div class="box-bottom">
-								<a href="#">Learn more</a>
+								<a href="<?php the_permalink() ?>">Learn more</a>
 							</div>
 						</div>
 					</div>

@@ -1,4 +1,5 @@
 <?php /* Template Name: My blog */ ?>
+
 <?php get_header(); ?>
 		<!-- end header -->
 		<section id="inner-headline">
@@ -17,8 +18,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8">
-						
-						<?php get_template_part('post-excerpt'); ?>
+		
+					<?php if(have_posts()): while(have_posts()) : the_post()?>
+								<h2><?php the_title(); ?></h2>
+								<?php the_content(); ?>
+							<?php endwhile;?>	
+							<?php else:?>
+								<h2>404 not found</h2>
+							<?php endif;?>
+					
 					
 						<div id="pagination">
 							<span class="all">Page 1 of 3</span>
