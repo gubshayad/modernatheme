@@ -17,29 +17,18 @@
 		<section id="content">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8">
-		
-					<?php if(have_posts()): while(have_posts()) : the_post()?>
-								<h2><?php the_title(); ?></h2>
-								<?php the_content(); ?>
-							<?php endwhile;?>	
+				<div class="col-lg-12">
+					<?php if(have_posts()):?>
+							<h1 class="page-title">
+								<?php _e( 'Search results for:', 'moderna' ); ?>
+								<div class="page-description"><?php echo get_search_query(); ?></div>
+							</h1>
+
+							<?php get_sidebar();?>
+							
 							<?php else:?>
 								<h2>404 not found</h2>
-							<?php endif;?>
-					
-					
-						<div id="pagination">
-							<span class="all">Page 1 of 3</span>
-							<span class="current">1</span>
-							<a href="#" class="inactive">2</a>
-							<a href="#" class="inactive">3</a>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<aside class="right-sidebar">
-						<?php dynamic_sidebar('blog_sidebar')?>
-							
-						</aside>
+						 <?php endif;?>
 					</div>
 				</div>
 			</div>

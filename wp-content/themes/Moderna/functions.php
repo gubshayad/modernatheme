@@ -31,6 +31,12 @@
 
     include_once('inc/wp_mce_button.php');
 
+    // About the excerpt
+    function wpdocs_custom_excerpt_length( $length ) {
+        return 20;
+    }
+    add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
  //About the theme option
  include_once('inc/theme-options.php');
 

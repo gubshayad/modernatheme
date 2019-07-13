@@ -1,0 +1,1 @@
+<?php posts_nav_link(' — ', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?>

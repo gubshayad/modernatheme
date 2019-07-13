@@ -50,11 +50,11 @@
 								?>
 								</ul>
 								<div class="search">
-									<form role="form">
-										<input type="text" class="search-form" autocomplete="off" placeholder="Search">
-										<i class="fa fa-search"></i>
+									<form role="form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+										<input type="search" class="search-form" name="s" id="s" autocomplete="off" placeholder="Search">
+										<a href=""><i class="fa fa-search"></i></a>
 									</form>
-							</div>
+								</div>
 						</div>
 						</div>
 					</div>

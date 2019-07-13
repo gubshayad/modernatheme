@@ -7,8 +7,7 @@
             </div>
             <!-- start flexslider -->
             <div id="post-slider" class="flexslider">
-                <ul class="slides">
-                    
+                <ul class="slides">      
                     <li>
                         <?php the_post_thumbnail( 'post-img', ' ' )?>
                     </li>
@@ -35,3 +34,5 @@
     </article>
 <?php endwhile; ?>    
 <?php endif; ?>
+
+<?php if(function_exists('wp_pagenavi')) {wp_pagenavi();} else{include('navigation.php');}?>

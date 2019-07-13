@@ -11,6 +11,16 @@
 
 
         ));
+        register_sidebar(array(
+            'name'=>'blog widgets',
+            'id'=>'blog_sidebar',
+            'before_widget'=>'<div class="widget"><ul class="cat"><a>',
+            'after_widget'=>'</a></ul></div>',
+            'before_title'=>'<h5 class="widgetheading">',
+            'after_title'=>'</h5>'
+
+
+        ));
     }
 
     add_action('widgets_init', 'moderna_theme_widgets');
